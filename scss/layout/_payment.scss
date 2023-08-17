@@ -1,0 +1,148 @@
+.payment {
+    padding: 74px 0 120px;
+
+    &-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 79px;
+    }
+
+    &-content {
+        max-width: 722px;
+        width: 100%;
+    }
+
+    &-title {
+        color: #09080D;
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: 0.16px;
+        margin-bottom: 48px;
+    }
+
+    &-metotd {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        label {
+            position: relative;
+            padding: 24px 0 16px;
+            border-radius: 32px;
+            border: 1px solid #E9EBED;
+            background-color: $bg-white;
+            display: block;
+            height: 72px;
+            cursor: pointer;
+
+
+            span {
+                width: 24px;
+                height: 24px;
+                display: block;
+                position: absolute;
+                border-radius: 50%;
+                border: 1px solid #E5E5E7;
+                top: 50%;
+                left: 16px;
+                transform: translateY(-50%);
+                transition: .3s ease;
+            }
+
+            &[for="paypal"] {
+                background-image: url(../img/paypal.svg);
+                background-repeat: no-repeat;
+                background-position: left 64px center;
+            }
+
+            &[for="pay"] {
+                background-image: url(../img/ApplePay.svg);
+                background-repeat: no-repeat;
+                background-position: left 64px center;
+            }
+        }
+
+        input {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+
+            &:checked~span {
+                background-color: $bg-ltgreen;
+            }
+        }
+
+    }
+
+    &-metotd-title {
+        color: #09080D;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: 0.1px;
+    }
+
+    .other-title {
+        display: block;
+        color: $color-grey;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.08px;
+        margin: 32px 0 32px;
+    }
+
+    &-form {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        label {
+            font-size: 14px;
+            line-height: 22px;
+            letter-spacing: 0.07px;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px 16px;
+            border-radius: 24px;
+            border: 1px solid #E9EBED;
+            background: $bg-white;
+            color: #AEAEB2;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.08px;
+
+            &::placeholder {
+                font: inherit;
+                color: inherit;
+            }
+        }
+    }
+
+    .form-code {
+        margin: 24px 0;
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+
+        label {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 14px;
+            line-height: 22px;
+            letter-spacing: 0.07px;
+            width: 224px;
+
+            input {
+                width: 100%;
+                padding: 14px 16px;
+                border-radius: 24px;
+                border: 1px solid #E9EBED;
+                background: $bg-white;
+            }
+        }
+    }
+}

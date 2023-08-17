@@ -1,0 +1,92 @@
+.overview {
+    padding-bottom: 120px;
+
+    &-title {
+        padding: 16px 12px;
+        display: block;
+        @include GeneralSans-Semibold(18px, 26px, 600);
+        color: $color-blue;
+        letter-spacing: 0.09px;
+    }
+
+    .table {
+        width: 100%;
+
+        th {
+            font-size: 18px;
+            line-height: 26px;
+            letter-spacing: 0.09px;
+            font-weight: 500;
+
+
+            &:first-child{
+                text-align: left;
+
+                @media (max-width: 450px) {
+                    font-size: 16px;
+                }
+
+                @media (max-width: 390px) {
+                    font-size: 13px;
+                }
+            }
+        }
+
+        tr {
+            padding: 16px 12px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            @media (max-width: 768px) {
+                &+tr{
+                    grid-template-rows: auto;
+
+                    .title {
+                        grid-column: 1/5;
+                        text-align: center;
+                        padding: 5px 0;
+                    }
+                    td{
+                        &:nth-child(2){
+                            grid-row: 2/3;
+                            grid-column: 1/2;
+                            height: 26px;
+                        }
+
+                        &:nth-child(3){
+                            grid-row: 2/3;
+                            grid-column: 2/4;
+                            height: 26px;
+
+                        }
+
+                        &:last-child{
+                            grid-row: 2/3;
+                            grid-column: 4/5;
+                            height: 26px;
+
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(odd) {
+                background: $bg-white;
+            }
+
+            .title {
+                font-size: 18px;
+                line-height: 26px;
+                letter-spacing: 0.09px;
+            }
+
+            .check{
+                background: url(../img/checkmark.svg) no-repeat center;
+
+                &.close{
+                    background: url(../img/close-circle.svg) no-repeat center;
+                }
+            }
+        }
+    }
+}

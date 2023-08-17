@@ -1,0 +1,123 @@
+.faqs {
+    padding: 120px 0 120px;
+
+    &-wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+        align-items: flex-start;
+
+        @media (max-width: 1100px) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &-tabs{
+        max-width: 700px;
+        width: 100%;
+    }
+
+    &-content {
+        max-width: 421px;
+        width: 100%;
+
+        p {
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0.08px;
+            color: #636366;
+            font-size: 16px;
+            margin-bottom: 48px;
+        }
+    }
+
+    &-title {
+        line-height: 80px;
+        letter-spacing: 0.36px;
+        font-size: 72px;
+        margin-bottom: 16px;
+    }
+
+    &-btn {
+        background:#BCFF5E;
+        padding: 16px 0;
+        border-radius: 24px;
+        width: 176px;
+    }
+
+    .tabs-title {
+        color: $color-primary;
+        font-size: 25px;
+        max-width: 504px;
+        width: 100%;
+        display: block;
+        line-height: 32px;
+        letter-spacing: 0.12px;
+        margin-bottom: 36px;
+    }
+
+    .faq-tab {
+
+        &-text {
+            display: none;
+            padding: 4px 50px 0 0;
+            color: #636366;
+            @include GeneralSans-Medium(16px, 24px, 400);
+            letter-spacing: 0.08px;
+
+            @media (max-width: 590px) {
+                padding: 4px 36px 0 0;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+
+        &.active {
+            
+            .faq-tab-text {}
+        }
+    }
+
+    .faq-title {
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: 0.1px;
+        display: block;
+        cursor: pointer;
+        position: relative;
+        padding: 12px 0;
+
+        @media (max-width: 590px) {
+            padding: 12px 36px 12px 0;
+        }
+        
+
+        &::after{
+            content: "+";
+            width: 24px;
+            height: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            border: 1px solid $color-primary;
+            position: absolute;
+            right: 0;
+            top: 14px;
+            z-index: 1;
+            transition: 0.3s linear;
+        }
+
+        &.active{
+            pointer-events: none;
+
+            &::after{
+                content: "─";
+                color: $color-white;
+                background: $color-dark;
+            }
+        }
+    }
+}

@@ -1,0 +1,111 @@
+.price {
+    padding: 120px 0;
+    background: $bg-section;
+
+    &-subtitle {
+        width: 116px;
+        border: 1px solid #E9EBED;
+        border-radius: 20px;
+        display: block;
+        margin: 0 auto;
+        font-size: 14px;
+        line-height: 22px;
+        padding: 8px 0;
+        text-align: center;
+        color: $color-blue;
+    }
+
+    &-title {
+        width: 776px;
+        font-size: 40px;
+        line-height: 48px;
+        text-align: center;
+        margin: 16px auto 43px;
+        color: $color-black;
+    }
+
+    &-wrapper {
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    &-block {
+        width: 320px;
+        background: $bg-secondary;
+        border-radius: 24px;
+        padding: 40px;
+        transition: 0.3s linear;
+        cursor: pointer;
+
+        @media (max-width: 450px) {
+            padding: 15px;
+        }
+
+        &.active {
+            background: $bg-blue;
+            border: 1px solid rgba(233, 235, 237, 0.16);
+            border-radius: 24px;
+
+            .type-price, .type-name {
+                color: $color-white;
+            }
+            
+            .item{
+                color: $color-white;
+                background: url(../img/Iconceckgreen.svg) no-repeat left center;
+                
+            }
+        }
+    }
+
+    .type-plane {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .type-price {
+        font-size: 40px;
+        line-height: 48px;
+
+        small {
+            font-size: 16px;
+            line-height: 24px;
+            color: #aeaeb2;
+        }
+    }
+
+    .type-name {
+        font-size: 20px;
+        line-height: 28px;
+        color: $color-blue;
+    }
+
+    .list {
+        margin: 32px 0;
+    }
+
+    .item {
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 26px;
+        padding-left: 40px;
+        background: url(../img/iconceck.svg) no-repeat left center;
+
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .price-link {
+        display: block;
+        text-align: center;
+        background: #BCFF5E;
+        border-radius: 20px;
+        padding: 12px 0;
+    }
+
+}

@@ -142,7 +142,53 @@
                 border-radius: 24px;
                 border: 1px solid #E9EBED;
                 background: $bg-white;
+
+                &::placeholder {
+                    font: inherit;
+                    color: #AEAEB2;
+                }
             }
         }
+    }
+
+    .save-card {
+        margin-bottom: 24px;
+
+        input {
+            position: absolute;
+            width: 0;
+            height: 0;
+
+            &:checked~label::before {
+                background: $bg-ltgreen;
+            }
+        }
+
+        label {
+            position: relative;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+
+            &::before {
+                content: "";
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                border: 1px solid #cdccd0;
+                display: block;
+            }
+        }
+    }
+
+    .btn-form-pay {
+        display: block;
+        width: 204px;
+        padding: 16px 0;
+        border-radius: 50px;
+        background: $bg-ltgreen;
+        border: none;
+        line-height: 24px;
+        letter-spacing: 0.08px;
     }
 }

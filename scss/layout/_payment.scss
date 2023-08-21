@@ -191,4 +191,52 @@
         line-height: 24px;
         letter-spacing: 0.08px;
     }
+
+    &-reserve {
+        max-width: 400px;
+        width: 100%;
+        background: $bg-white;
+        padding: 24px;
+        border-radius: 20px;
+
+        .price {
+            padding: 0;
+            background: transparent;
+            color: #09080D;
+            font-size: 40px;
+            line-height: 48px;
+            letter-spacing: 0.2px;
+
+            span {
+                color: $color-grey;
+                @include GeneralSans-Regular(14px, 22px, 400);
+                letter-spacing: 0.07px;
+            }
+        }
+
+        .plane {
+            span {
+                @include GeneralSans-Semibold(18px, 26px, 600);
+                letter-spacing: 0.09px;
+            }
+
+            p {
+                color: $color-grey;
+                @include GeneralSans-Regular(14px, 22px, 400);
+                letter-spacing: 0.08px;
+            }
+        }
+
+        .includ {
+            margin-top: 32px;   
+
+            span{
+                letter-spacing: 0.08px;
+            }
+
+            ul{
+
+            }
+        }
+    }
 }

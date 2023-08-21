@@ -77,7 +77,9 @@ $(document).ready(function () {
         $(this).siblings().slideDown(800);
     });
 
+    //selected
 
+    $('.js-example-basic-single').select2();
 });
 
 const togglepassword = document.querySelector('#togglepassword')

@@ -201,6 +201,7 @@
 
         .price {
             padding: 0;
+            margin-bottom: 32px;
             background: transparent;
             color: #09080D;
             font-size: 40px;
@@ -228,15 +229,58 @@
         }
 
         .includ {
-            margin-top: 32px;   
+            margin-top: 32px;
 
-            span{
+            span {
                 letter-spacing: 0.08px;
+                margin-bottom: 16px;
+                display: block;
             }
 
-            ul{
+            li {
+                padding-left: 40px;
+                line-height: 27px;
+                letter-spacing: 0.08px;
+                background: url(../img/check-price.svg) no-repeat left center;
 
+                &:not(:last-child) {
+                    margin-bottom: 16px;
+                }
             }
         }
+
+        .package {
+            margin-top: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            span {
+                font-size: 14px;
+                line-height: 22px;
+                letter-spacing: 0.07px;
+            }
+
+            select {
+                background: $bg-white;
+                line-height: 24px;
+                letter-spacing: 0.08px;
+                color: #AEAEB2;
+
+                option{
+
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .selection span {
+        padding: 14px 16px;
+        border: 1px solid #E9EBED;
+        border-radius: 24px;
+
     }
 }

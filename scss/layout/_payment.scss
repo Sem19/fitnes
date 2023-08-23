@@ -267,7 +267,7 @@
                 letter-spacing: 0.08px;
                 color: #AEAEB2;
 
-                option{
+                option {
 
                     &:not(:last-child) {
                         margin-bottom: 10px;
@@ -278,9 +278,40 @@
     }
 
     .selection span {
-        padding: 14px 16px;
-        border: 1px solid #E9EBED;
         border-radius: 24px;
 
+    }
+
+    .select2-container .select2-selection--single {
+        height: 52px;
+    }
+
+    .select2-container .select2-selection--single .select2-selection__rendered {
+        padding-left: 0;
+        padding-right: 0;
+        padding: 14px 36px 14px 16px;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        line-height: 22px;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow b {
+        display: none;
+    }
+
+    .select2-selection--single .select2-selection__arrow {
+        height: 20px;
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        width: 20px;
+        background: url(../img/arrow-select.svg) no-repeat center;
+        transform: translateY(-50%);
+        transition: .3s ease;
+    }
+
+    .select2-container--open .select2-selection__arrow{
+        background: url(../img/arrow-select-revers.svg) no-repeat center;
     }
 }

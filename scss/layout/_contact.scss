@@ -73,6 +73,7 @@
         }
 
         .btn-contact {
+            align-self: end;
             width: 204px;
             padding: 16px 0;
             border-radius: 50px;
@@ -105,13 +106,26 @@
 
         
         li {
-            padding-left: 40px;
+
+            padding: 6px 0px 16px 60px;
             line-height: 27px;
             letter-spacing: 0.08px;
 
             &:not(:last-child) {
                 margin-bottom: 16px;
             }
+        }
+
+        .phone{
+            background: url(../img/contact-phone.svg) no-repeat center left;
+        }
+
+        .email{
+            background: url(../img/contact-email.svg) no-repeat center left;
+        }
+
+        .location{
+            background: url(../img/contact-location.svg) no-repeat center left;
         }
     }
 }

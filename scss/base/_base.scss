@@ -27,11 +27,16 @@ img {
     cursor: pointer;
 }
 
-input{
+input, textarea{
     font: inherit;
     background: transparent;
     outline: none;
     border: none;
+
+    &::placeholder{
+        font: inherit;
+        color: inherit;
+    }
 }
 
 // main style

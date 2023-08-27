@@ -1,4 +1,9 @@
 .aboutus {
+    background-color: $bg-blue;
+    background-image: url(../img/man2.png);
+    background-repeat: no-repeat;
+    background-position: bottom 0 center;
+    padding: 79px 0 470px;
 
     &-btn {
         display: block;
@@ -18,42 +23,40 @@
     &-wrapper {
         display: flex;
         justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
         gap: 183px;
     }
 
     &-title {
+        max-width: 485px;
+        width: 100%;
         color: $color-white;
         @include GeneralSans-Regular(72px, 80px, 400);
         letter-spacing: 0.36px;
 
         span {
-            color: $color-white;
-            font-size: 72px;
-            font-weight: 500;
-            line-height: 80px;
+            @include GeneralSans-Medium(72px, 80px, 500);
             letter-spacing: 0.36px;
         }
     }
 
     &-right {
+        max-width: 532px;
+        width: 100%;
 
         span {
-            color: var(--additional-colors-white, #FFF);
-            font-family: General Sans;
+            display: block;
+            color: $color-white;
             font-size: 24px;
-            font-style: normal;
-            font-weight: 500;
             line-height: 32px;
             letter-spacing: 0.12px;
+            margin-bottom: 16px;
         }
 
         p {
-            color: var(--grayscale-20, #D1D1D6);
-            font-family: General Sans;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 26px;
+            @include GeneralSans-Regular(18px, 26px, 400);
+            color: #D1D1D6;
             letter-spacing: 0.09px;
         }
     }
@@ -61,95 +64,3 @@
 
 }
 
-.home {
-    background-color: $bg-blue;
-    background-image: url(../img/man2.png);
-    background-repeat: no-repeat;
-    background-position: right 50% top 105px;
-    padding-bottom: 98px;
-}
-
-.corework {
-    background: $bg-section;
-    padding: 120px 0;
-
-    &-title {
-        text-align: center;
-        color: $color-dark;
-        font-size: 48px;
-        line-height: 56px;
-        letter-spacing: 0.24px;
-        margin-bottom: 16px;
-    }
-
-    &-text {
-        text-align: center;
-        @include GeneralSans-Regular(16px, 24px, 400);
-        color: $color-grey;
-        letter-spacing: 0.08px;
-        margin-bottom: 56px;
-    }
-
-    .commitment-block {
-        display: flex;
-        justify-content: center;
-        gap: 48px;
-    }
-
-    .motivation-block {
-        margin-top: 120px;
-        display: flex;
-        justify-content: center;
-        flex-direction: row-reverse;
-        gap: 48px;
-    }
-
-    .passion-block {
-        margin-top: 120px;
-        display: flex;
-        justify-content: center;
-        gap: 48px;
-    }
-
-    .commitment-content {
-        padding: 64px 40px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        max-width: 473px;
-        width: 100%;
-        gap: 24px;
-        border-radius: 20px;
-        background: $bg-white;
-    }
-
-    .arm {
-        padding-top: 60px;
-        background: url(../img/armicon.svg) no-repeat left top;
-        font-size: 32px;
-        line-height: 40px;
-        letter-spacing: 0.16px;
-    }
-
-    .heart {
-        padding-top: 60px;
-        background: url(../img/heart.svg) no-repeat left top;
-        font-size: 32px;
-        line-height: 40px;
-        letter-spacing: 0.16px;
-    }
-
-    .star {
-        padding-top: 60px;
-        background: url(../img/star-shining.svg) no-repeat left top;
-        font-size: 32px;
-        line-height: 40px;
-        letter-spacing: 0.16px;
-    }
-
-    .coretext {
-        font-size: 18px;
-        line-height: 26px;
-        letter-spacing: 0.09px;
-    }
-}

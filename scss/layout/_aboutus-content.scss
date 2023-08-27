@@ -1,0 +1,85 @@
+.aboutus-content {
+    background: $bg-section;
+    padding: 120px 0;
+
+    &-title {
+        text-align: center;
+        color: $color-dark;
+        font-size: 48px;
+        line-height: 56px;
+        letter-spacing: 0.24px;
+        margin-bottom: 16px;
+    }
+
+    &-text {
+        text-align: center;
+        @include GeneralSans-Regular(16px, 24px, 400);
+        color: $color-grey;
+        letter-spacing: 0.08px;
+        margin-bottom: 56px;
+    }
+
+    .commitment-block {
+        display: flex;
+        justify-content: center;
+        gap: 48px;
+    }
+
+    .motivation-block {
+        margin-top: 120px;
+        display: flex;
+        justify-content: center;
+        flex-direction: row-reverse;
+        gap: 48px;
+    }
+
+    .passion-block {
+        margin-top: 120px;
+        display: flex;
+        justify-content: center;
+        gap: 48px;
+    }
+
+    .commitment-content {
+        padding: 64px 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 473px;
+        width: 100%;
+        gap: 24px;
+        border-radius: 20px;
+        background: $bg-white;
+    }
+
+    .arm {
+        padding-top: 60px;
+        background: url(../img/armicon.svg) no-repeat left top;
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: 0.16px;
+    }
+
+    .heart {
+        padding-top: 60px;
+        background: url(../img/heart.svg) no-repeat left top;
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: 0.16px;
+    }
+
+    .star {
+        padding-top: 60px;
+        background: url(../img/star-shining.svg) no-repeat left top;
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: 0.16px;
+    }
+
+    .coretext {
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: 0.09px;
+    }
+
+}

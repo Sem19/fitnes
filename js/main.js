@@ -78,8 +78,12 @@ $(document).ready(function () {
     });
 
     //selected
-
-    $('.js-example-basic-single').select2();
+    if(!$('.js-example-basic-single')) {
+        return
+    } else {
+        $('.js-example-basic-single').select2();
+    }
+    
 });
 
 const togglepassword = document.querySelector('#togglepassword')

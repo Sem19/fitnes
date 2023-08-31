@@ -78,8 +78,8 @@ $(document).ready(function () {
     });
 
     //selected
-    if(!$('.js-example-basic-single')) {
-        return
+    if(!$('.js-example-basic-single').length) {
+        return false
     } else {
         $('.js-example-basic-single').select2();
     }
